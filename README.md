@@ -12,7 +12,7 @@ Nehebkau uses a unity-like structure with Scenes, GameObject and Component.
 - [X] Basic Objects
 - [ ] Physics
    - [X] Basic movement (including basic forces and gravity)
-   - [ ] Friction
+   - [ ] Friction & bounciness
    - [ ] Inertia (Rotations)
    - [ ] Collisions
 - [ ] Input System
