@@ -1,2 +1,2 @@
-# FoxyGameEngine
-Ye i'm making a game Engine
+# Nehebkau
+An open-source 2D game engine made in python
