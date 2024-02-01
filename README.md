@@ -10,6 +10,7 @@ Nehebkau uses a unity-like structure with Scenes, GameObject and Component.
 
 ## Where are we ?
 - [X] Basic Objects
+- [X] Delta Time
 - [ ] Physics
    - [X] Basic movement (including basic forces and gravity)
    - [ ] Friction & bounciness
