@@ -1,6 +1,6 @@
 from Component import Component
 from MathF.Vector import Vector2
-from decimal import Decimal
+from mpmath import *
 
 class GameObject:
     def __init__(self, name, parent, transform = None):
@@ -72,19 +72,17 @@ class GameObject:
 
 class Transform(Component):
     name = "Transform"
-    def __init__(self, position = Vector2(0, 0), rotation = Decimal(), gameObject = None):
+    def __init__(self, position = Vector2(0, 0), rotation = mp.mpf(), gameObject = None):
         super().__init__(gameObject)
         if (type(position) == Vector2):
             self.position = position
         else:
             raise TypeError("Expected value of type Vector2")
             
-        if (type(rotation) == Decimal):
-            self.rotation = rotation
-        elif (type(rotation) == float) or (type(rotation) == int):
-            self.rotation = Decimal(str(rotation))
-        else:
-            raise TypeError("Expected value of type Decimal, float or int")
+        self.rotation = mpmathify(rotation)
+        
+        self.up = Vector2.defineAmpl(1, self.rotation)
+        self.right = Vector2.defineAmpl(1, self.rotation + 90)
     
     def __str__(self):
         return f"Transform comp : {self.position.x} {self.position.y}"
