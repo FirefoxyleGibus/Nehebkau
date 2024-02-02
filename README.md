@@ -6,14 +6,14 @@ Nehebkau uses a unity-like structure with Scenes, GameObject and Component.
 
 ## Requirements
 - Python 3.10
-- That's it for now
+- [mpmath 1.3.0](https://mpmath.org)
 
 ## Where are we ?
 - [X] Basic Objects
 - [X] Delta Time
 - [ ] Physics
    - [X] Basic movement (including basic forces and gravity)
-   - [ ] Friction & bounciness
+   - [X] Friction & bounciness
    - [ ] Inertia (Rotations)
    - [ ] Collisions
 - [ ] Input System
